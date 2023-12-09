@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import PortalComponent from "./Portal/PortalComponent";
+import ParentComponent from "./Children/Parrent";
+import ChildComponent1 from "./Children/Children1";
+import ChildComponent2 from "./Children/Children2";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PortalComponent/>
+      <ParentComponent>
+        <ChildComponent1/>
+        <ChildComponent2/>
+      </ParentComponent>
     </div>
   );
 }
